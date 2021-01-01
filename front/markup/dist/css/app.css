@@ -1,0 +1,266 @@
+.Bd\(bd1\) {
+  border: 1px solid #000;
+}
+
+.D\(f\) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.D\(n\)\! {
+  display: none!important;
+}
+
+.Fld\(c\) {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.Ai\(c\) {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Jc\(c\) {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.Jc\(sb\) {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#main .tables-body .line .string input,
+.W\(100\%\) {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  background: #0a0a0a;
+  color: #fff;
+  font: 400 15px Ubuntu;
+}
+
+body,
+html {
+  overflow: hidden!important;
+}
+
+input {
+  color: #fff;
+  border: .1px solid #5f5f5f;
+  padding: 10px;
+  width: auto;
+  font: 400 13px Ubuntu;
+  background: #010101;
+  outline: 0!important;
+}
+
+input:focus {
+  border-color: #c9a86b;
+}
+
+li,
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+#header {
+  padding: 14px;
+  height: 40px;
+  background: #161616;
+}
+
+#header .left {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#header .right button {
+  width: 32px;
+  height: 32px;
+}
+
+#header .right button svg {
+  width: 20px;
+  height: 20px;
+}
+
+#header .title {
+  font: 400 12px Ubuntu;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 60px;
+}
+
+#header .files-drop {
+  -webkit-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  transform: translateX(-100px);
+  background: #0a0a0a;
+  border: 1px solid #5f5f5f;
+}
+
+#header .files-drop ul li a,
+#header .nav>li {
+  text-transform: uppercase;
+  font: 400 14px Ubuntu;
+  color: #fff;
+}
+
+#header .nav>li {
+  letter-spacing: .7px;
+}
+
+#header .nav>li:hover {
+  color: #fff;
+}
+
+#header .nav>li.active {
+  color: #c9a86b;
+}
+
+#main {
+  margin: 40px;
+}
+
+#main ul.tabs-nav {
+  overflow-x: auto;
+  width: auto;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 10px 0;
+}
+
+#main ul.tabs-nav a {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font: 400 12px Ubuntu;
+  letter-spacing: .2px;
+  color: #fff;
+}
+
+#main ul.tabs-nav a button {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  visibility: hidden;
+}
+
+#main ul.tabs-nav a:hover {
+  background: 0 0;
+}
+
+#main ul.tabs-nav a:hover button,
+#main ul.tabs-nav li.uk-active a button {
+  visibility: visible;
+}
+
+#main ul.tabs-nav li.uk-active a {
+  background: 0 0;
+  border-color: #c9a86b;
+}
+
+#main .info {
+  margin: 35px 0 30px;
+}
+
+#header .nav>li,
+#main .info ul li {
+  margin-right: 24px;
+}
+
+#main .info ul li span {
+  margin-left: 5px;
+  color: #fff;
+}
+
+#main .tables-header .line,
+li,
+ul {
+  padding: 0;
+}
+
+#main .info ul li,
+#main .tables-header .line .string {
+  color: #cdcdcd;
+  font: 400 11px Ubuntu;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+#main .tables-header .line .string:first-child {
+  width: 20%;
+}
+
+#main .tables-header .line .string:nth-child(2),
+#main .tables-header .line .string:nth-child(3) {
+  width: 25%;
+}
+
+#main .tables-header .line .string:nth-child(4) {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#main .tables-body .line {
+  padding: 10px;
+}
+
+#main .tables-body .line .string {
+  color: #fff;
+  font: 400 13px Ubuntu;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#main .tables-body .line .string span {
+  font: 400 10px Ubuntu;
+  color: #fff;
+  margin-right: 5px;
+}
+
+#main .tables-body .line .string:first-child {
+  width: 20%;
+  color: #5f5f5f;
+}
+
+#main .tables-body .line .string:nth-child(2),
+#main .tables-body .line .string:nth-child(3) {
+  width: 25%;
+}
+
+#main .tables-body .line .string:nth-child(4) {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#main .tables-body .line:nth-child(2n) {
+  background: #161616;
+}
+/*# sourceMappingURL=maps/app.css.map */

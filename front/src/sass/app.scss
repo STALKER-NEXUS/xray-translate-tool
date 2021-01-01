@@ -1,0 +1,266 @@
+$black-0: #010101;
+$black-1: #0A0A0A;
+$black-2: #0E0E0E;
+$black-3: #161616;
+$black-4: #2B2B2B;
+$color0:#C9A86B;
+$gray-0: #FFFFFF;
+$gray-1: #CDCDCD;
+$gray-2: #5F5F5F;
+
+$font: 'Ubuntu';
+
+@import "./_helpers/atomic";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    overflow: hidden !important;
+    background: $black-1;
+    color: #fff;
+    font: 400 15px $font;
+}
+
+body {
+    overflow: hidden !important;
+}
+
+input {
+    color: #fff;
+    border: .1px solid $gray-2;
+    padding: 10px 10px;
+    width: auto;
+    font: 400 13px $font;
+    background: $black-0;
+    outline: 0 !important;
+
+    &:focus {
+        border-color: $color0;
+    }
+}
+
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#header {
+    padding: 14px;
+    height: 40px;
+    background: $black-3;
+
+
+
+    .left {
+        flex: 1;
+    }
+
+    .right {
+        button {
+            size: 32px;
+
+            svg {
+                size: 20px;
+            }
+        }
+    }
+
+    .title {
+        font: 400 12px $font;
+        color: $gray-0;
+        text-transform: uppercase;
+        margin-right: 60px;
+    }
+
+    .files-drop {
+        transform: translateX(-100px);
+        background: $black-1;
+        border: 1px solid $gray-2;
+
+        ul {
+            li {
+                a {
+                    text-transform: uppercase;
+                    font: 400 14px $font;
+                    color: $gray-0;
+                    // color: #fff;
+                }
+            }
+        }
+    }
+
+    .nav {
+        >li {
+            font: 400 14px $font;
+            color: $gray-0;
+            text-transform: uppercase;
+            margin-right: 24px;
+            letter-spacing: .7px;
+
+
+
+            &:hover {
+                color: #fff;
+            }
+
+            &.active {
+                color: $color0;
+            }
+        }
+    }
+}
+
+#main {
+    margin: 40px;
+
+    ul.tabs-nav {
+        overflow-x: auto;
+        width: auto;
+        flex-wrap: nowrap;
+        padding: 10px 0;
+
+
+
+        a {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font: 400 12px $font;
+            letter-spacing: .2px;
+            color: #fff;
+
+            button {
+                margin-left: 10px;
+                size: 16px;
+                visibility: hidden;
+            }
+
+            &:hover {
+                background: transparent;
+
+                button {
+                    visibility: visible;
+                }
+            }
+        }
+
+        li {
+
+            &.uk-active a {
+                background: transparent;
+                border-color: $color0;
+
+                button {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+
+    .info {
+        margin: 35px 0 30px;
+
+        ul {
+            li {
+                margin-right: 24px;
+                color: $gray-1;
+                font: 400 11px $font;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+
+                span {
+                    margin-left: 5px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .tables {
+        .line {}
+
+        &-header {
+            .line {
+                padding: 0;
+
+                .string {
+                    color: $gray-1;
+                    font: 400 11px $font;
+                    text-transform: uppercase;
+                    letter-spacing: .5px;
+
+                    &:nth-child(1) {
+                        width: 20%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 25%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 25%;
+                    }
+
+                    &:nth-child(4) {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            .line {
+                padding: 10px;
+
+                .string {
+                    color: #fff;
+                    font: 400 13px $font;
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        font: 400 10px $font;
+                        color: $gray-0;
+                        margin-right: 5px;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+
+                    &:nth-child(1) {
+                        width: 20%;
+                        color: $gray-2;
+                    }
+
+                    &:nth-child(2) {
+                        width: 25%;
+                    }
+
+                    &:nth-child(3) {
+                        width: 25%;
+                    }
+
+                    &:nth-child(4) {
+                        flex: 1;
+                    }
+                }
+
+                &:nth-child(2n) {
+                    background: $black-3;
+                }
+            }
+        }
+    }
+}

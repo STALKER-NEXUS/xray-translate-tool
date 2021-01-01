@@ -1,0 +1,47 @@
+{
+   "cfg": {
+      "srv": {
+         "port1": 3000,
+         "port2": 3001,
+         "tunel": "false",
+         "addressTunel": "gentle-ladybug-6"
+      }
+   },
+   "paths": {
+      "html": {
+         "src": "src/pug/**/!(_)*.pug",
+         "watch": "src/pug/**/*.pug",
+         "middle": "markup/html/**/*.html",
+         "dist": "markup/html"
+      },
+      "styles": {
+         "src": "src/sass/**/*.{scss, sass}",
+         "acss": "src/sass/_helpers/",
+         "ignore": "!src/sass/_framework/**/*.scss",
+         "middle": "markup/dist/css/**/*.css",
+         "dist": "markup/dist/css/"
+      },
+      "javascript": {
+         "src": "src/js/**/*.js",
+         "dist": "markup/dist/js/"
+      },
+      "img": {
+         "src": "src/img/**/*.*",
+         "dist": "markup/dist/img/",
+         "assets": "dist/img"
+      },
+      "svg": {
+         "src": "src/i/icons/**/*.svg",
+         "dest": "../../../../src/sass/helpers/_sprite.scss",
+         "template": "src/i/sprites/_sprite_template.scss",
+         "sprite": "sprite.svg",
+         "pug": "src/pug/helpers/_svg.pug",
+         "dist": "markup/dist/img/"
+      },
+      "sprites": {
+         "src": "src/sprite/*",
+         "img": "markup/dist/img/",
+         "dest": "src/sass/_helpers/"
+      }
+   }
+}

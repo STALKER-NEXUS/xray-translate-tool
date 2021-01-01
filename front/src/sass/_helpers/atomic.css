@@ -1,0 +1,24 @@
+.Bd\(bd1\) {
+  border: 1px solid #000;
+}
+.D\(f\) {
+  display: flex;
+}
+.D\(n\)\! {
+  display: none !important;
+}
+.Fld\(c\) {
+  flex-direction: column;
+}
+.Ai\(c\) {
+  align-items: center;
+}
+.Jc\(c\) {
+  justify-content: center;
+}
+.Jc\(sb\) {
+  justify-content: space-between;
+}
+.W\(100\%\) {
+  width: 100%;
+}

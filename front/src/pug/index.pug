@@ -1,0 +1,95 @@
+include mixins/_sprite
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title XRAY translate tool
+		link(rel="stylesheet" href="/dist/css/framework.css")
+		link(rel="stylesheet" href="/dist/css/app.css")
+
+	body
+
+		#app
+			header#header(class="D(f) Ai(c) Jc(sb) W(100%)")
+				.left(class="D(f)")
+					.title XRAY Translate tool
+					ul.nav(class="D(f)")
+						li File
+						.files-drop(uk-dropdown='mode: click')
+							ul.uk-nav.uk-dropdown-nav
+								li
+									a(href='#') Open file
+								li
+									a(href='#') Open translate
+								li.uk-nav-divider
+								li
+									a(href='#') Save
+								li
+									a(href='#') Save as
+
+						li Settings
+						li Help
+						li About
+				.right
+					button(uk-icon="minus")
+					button(uk-icon="close")
+			main#main
+				ul.tabs-nav(class="uk-subnav uk-subnav-pill" uk-switcher="connect: .tabs-content")
+					li
+						a(href="#" class="D(f) Ai(c)")
+							span ui_st_screen
+							button(uk-icon="close")
+					li
+						a(href="#" class="D(f) Ai(c)")
+							span ui_st_inventory
+							button(uk-icon="close")
+
+				ul.tabs-content.uk-switcher
+					li.tab
+						.info
+							ul(class="D(f) Ai(c)")
+								li(class="D(f) Ai(c)")
+									| File : 
+									span ui_st_screen
+								li(class="D(f) Ai(c)")
+									| Strings :
+									span 135
+								li(class="D(f) Ai(c)")
+									| Encoding
+									span windows-1251
+
+						.tables
+							.tables-header(class="D(f) Fld(c)")
+								.line(class="D(f) Ai(c)")
+									.string ID
+									.string Original text
+									.string Machine translation
+									.string Your translation
+
+							.tables-body(class="D(f) Fld(c)")
+								.line(class="D(f) Ai(c)")
+									.string actor_inventory_box_use
+									.string 
+										span [$$ACTION_USE$$]
+										| ОТКРЫТЬ ЛИЧНЫЙ ЯЩИК
+									.string 
+										span [$$ACTION_USE$$]
+										| OPEN A PERSONAL BOX
+									.string
+										input(type="text" value="OPEN A PERSONAL BOX")
+								.line(class="D(f) Ai(c)")
+									.string cant_walk
+									.string 
+										| ВЫ СЛИШКОМ ИСТОЩЕНЫ, ЧТОБЫ ДВИГАТЬСЯ
+									.string 
+										| YOU ARE TOO EXHAUSTED TO MOVE
+									.string
+										input(type="text" value="YOU ARE TOO EXHAUSTED TO MOVE")
+
+
+
+		script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js")
+		script(src="/dist/js/index.js")

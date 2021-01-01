@@ -1,0 +1,20 @@
+module.exports = () => {
+	const tasks = [
+		"build:css",
+		"build:js",
+		"build:html",
+		"build:acss",
+		"build:svg"
+	];
+
+	if ($.IS_PROD)
+		tasks.push("build:img");
+
+	$.gulp.task("compile", $.gulp.series.apply($.gulp, tasks), done => {
+			$.gulp.src("src/fonts/**/*")
+				.pipe($.gulp.dest("app/public/fonts"))
+
+			done();
+		}
+	);
+}
